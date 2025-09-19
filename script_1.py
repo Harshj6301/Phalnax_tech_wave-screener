@@ -1,4 +1,19 @@
-# Elliott Wave Stock Screener Setup Guide
+# Create a requirements.txt file for easy installation
+requirements_content = '''streamlit==1.28.0
+yfinance==0.2.21
+pandas==2.0.3
+numpy==1.24.3
+TA-Lib==0.4.25
+scipy==1.11.1
+plotly==5.15.0
+'''
+
+# Write requirements file
+with open('requirements.txt', 'w') as f:
+    f.write(requirements_content)
+
+# Create a setup guide
+setup_guide = '''# Elliott Wave Stock Screener Setup Guide
 
 ## Prerequisites
 - Python 3.8 or higher
@@ -115,3 +130,16 @@ Add new technical indicators in the `calculate_indicators` method.
 
 ### Additional Screening Criteria
 Implement new criteria functions and add columns to the results DataFrame.
+'''
+
+# Write setup guide
+with open('README.md', 'w') as f:
+    f.write(setup_guide)
+
+print("📋 Additional files created:")
+print("- requirements.txt (dependency list)")
+print("- README.md (comprehensive setup guide)")
+print("\n🚀 Your Elliott Wave Screener is ready!")
+print("\nQuick start:")
+print("1. pip install -r requirements.txt")
+print("2. streamlit run elliott_wave_screener.py")
